@@ -1,0 +1,9 @@
+<div class="container">
+    <button class = "btn btn-primary" (click) = "toggleSecret()">Add Details</button>
+    <p *ngIf="showSecret">Secret keyword is tuna</p>
+    <p 
+        *ngFor="let detail of details; let i = index" 
+        [ngStyle] = "{backgroundColor: i > 4 ? 'blue' : 'white'}"
+        [ngClass] = "{white: i > 4 }"
+        >{{ detail }}</p>
+</div>
